@@ -9,7 +9,7 @@ double p1,p2,p3,p4,p5,p6,e1,e2,prom1,prom2,salir,notaRequerida;
 	string verificacion;
 
 void proceso(){
-//declaracion de variavles
+
 	cout<<"Cuanto quieres sacar al final del ano ?"<<endl;
 	cin>>notaRequerida;
 	
