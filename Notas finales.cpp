@@ -10,12 +10,20 @@ double p1,p2,p3,p4,p5,p6,e1,e2,prom1,prom2,salir,notaRequerida;
 
 void proceso(){
 
+	
+
 	cout<<"Cuanto quieres sacar al final del ano ?"<<endl;
 	cin>>notaRequerida;
+
 	
-	if (notaRequerida<=10){
+	if (notaRequerida<=10)
+	{
+		do{
 		cout<<"\nya tienes la nota del primer quimistre ?\n";
-	cin>>verificacion;
+		cin>>verificacion;
+		if (!(verificacion == "si"||verificacion == "Si"||verificacion == "SI"||verificacion == "s"||verificacion == "no"||verificacion=="NO"||verificacion=="No"||verificacion=="n")) cout << "error Teclea un opcion valida\n";
+			}
+		while (!(verificacion == "si"||verificacion == "Si"||verificacion == "SI"||verificacion == "s"||verificacion == "no"||verificacion=="NO"||verificacion=="No"||verificacion=="n") );
 	if(verificacion=="si"||verificacion=="Si"||verificacion=="SI"||verificacion=="s")
 	{
 		
@@ -41,18 +49,21 @@ void proceso(){
 
 						double promReq;
 						promReq=(notaRequerida*2)-prom1;
-						cout<<"si no existen valores es que ya te quedaste "<<endl;
+						cout<<"si no existen valores es que no lo podras lograr \n\n "<<endl;
 						cout<<"Para pasar Necesitas estas Notas \n\n";
-						cout<< "Parcial 3"<<"     "<<"examen"<<endl;
-						for (e2 = 0; e2 <=10; e2=e2+0.5)
+						cout<< "Parcial 3"<<"     "<<"Examen"<<endl;
+						for (e2 = 0; e2 <=10; e2=e2+0.2)
+
 						{
-							p6=((3*promReq-e2*0.6)/0.8)-p4-p5;
+							
+								p6=((3*promReq-e2*0.6)/0.8)-p4-p5;
 
-
-							if (p6<=10&&p6>=0){
-								cout<<p6<<"		"<<e2<<endl<<endl;
-								
-							}
+							if(p6>=0 && p6<=10){
+								if (p6<=10&&p6>=0){
+									cout<<p6<<"		"<<e2<<endl<<endl;
+									
+								}
+							}else { cout << "No puedes sacar " << notaRequerida<< endl;}
 							
 							
 						}
